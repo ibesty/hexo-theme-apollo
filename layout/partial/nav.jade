@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ul.nav.nav-list
     each value, key in theme.menu
         li.nav-list-item
@@ -5,3 +6,13 @@ ul.nav.nav-list
             - var tar = re.test(value) ? "_blank" : "_self"
             a.nav-list-link(class={active: is_home() && value === "/"} href=value target=tar)
                 != key.toUpperCase()
+=======
+ul.nav.nav-list
+    each value, key in theme.menu
+        li.nav-list-item
+            - var re = /^(http|https):\/\/*/gi;
+            - var tar = re.test(value) ? "_blank" : "_self"
+            - var act = !re.test(value) && "/"+page.current_url === value
+            a.nav-list-link(class={active: act} href=url_for(value) target=tar)
+                != key.toUpperCase()
+>>>>>>> 4d1ada90e04d3b4b9de2c4fc3a80aea9539170b1

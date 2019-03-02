@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 doctype
 html(lang=config.language)
     head
@@ -15,3 +16,21 @@ html(lang=config.language)
                     block pagination
                     block copyright
             include scripts
+=======
+doctype
+html(lang=config.language)
+    head
+        include head
+    body
+        .wrap
+            header
+                a.logo-link(href=url_for())
+                    img(src=url_for(theme.logo) alt="logo")
+                include nav
+            main.container
+                block container
+            footer
+                block pagination
+                block copyright
+        include scripts
+>>>>>>> 4d1ada90e04d3b4b9de2c4fc3a80aea9539170b1
